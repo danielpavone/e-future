@@ -11,30 +11,30 @@ const AvailableController = require('./controllers/AvailableController');
 const routes = express.Router();
 
 // Company routes
-routes.post('/company', CompanyController.store);
-routes.get('/company', CompanyController.index);
+routes.post('/companies', CompanyController.store);
+routes.get('/companies', CompanyController.index);
 
 // Course routes
-routes.post('/course', CourseController.store);
-routes.get('/course', CourseController.index);
-routes.get('/course/:id', CourseController.show);
+routes.post('/courses', CourseController.store);
+routes.get('/courses', CourseController.index);
+routes.get('/courses/:id', CourseController.show);
 
 // Workshop routes
-routes.post('/workshop', WorkshopController.store);
-routes.get('/workshop', WorkshopController.index);
-routes.get('/workshop/:id', WorkshopController.show);
+routes.post('/workshops', WorkshopController.store);
+routes.get('/workshops', WorkshopController.index);
+routes.get('/workshops/:id', WorkshopController.show);
 
 // Order routes
-routes.post('/order', OrderController.store);
+routes.post('/orders', OrderController.store);
 
 // School routes
-routes.post('/school', SchoolController.store);
-routes.get('/school', SchoolController.index);
-routes.get('/school/:id', SchoolController.show);
-routes.get('/school/:id/available', AvailableController.index);
+routes.post('/schools', SchoolController.store);
+routes.get('/schools', SchoolController.index);
+routes.get('/schools/:id', SchoolController.show);
+routes.get('/schools/:id/available', AvailableController.index);
 
 // Schedule routes
-routes.post('/schedule', ScheduleController.store);
-routes.get('/schedule', ScheduleController.index);
+routes.post('/schedules', ScheduleController.store);
+routes.get('/schedules', ScheduleController.index);
 
 module.exports = routes;
