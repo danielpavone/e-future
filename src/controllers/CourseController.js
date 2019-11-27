@@ -7,7 +7,7 @@ module.exports = {
   },
 
   async index(req, res) {
-    const courses = await Course.find();
+    const courses = await Course.find().populate('company');
     return res.status(200).json(courses);
   },
 
