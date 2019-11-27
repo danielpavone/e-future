@@ -7,7 +7,7 @@ module.exports = {
   },
 
   async index(req, res) {
-    const workshops = await Workshop.find();
+    const workshops = await Workshop.find().populate('school');
     return res.status(200).json(workshops);
   },
 
